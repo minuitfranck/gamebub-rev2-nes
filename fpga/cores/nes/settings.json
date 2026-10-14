@@ -1,0 +1,194 @@
+{
+	"settings": [
+		{
+			"id": 0,
+			"label": "Reset Core",
+			"address": "0x2000",
+			"type": "action",
+			"value": 1
+		},
+		{
+			"id": 1,
+			"label": "Save State",
+			"hotkey": "save_state",
+			"address": "0x14",
+			"type": "action",
+			"value": "0x11",
+			"status": {
+				"address": "0x0100",
+				"busy_mask": "0x680",
+				"done_mask": "0x100",
+				"timeout_ms": 6000,
+				"done_text": "State saved",
+				"fail_text": "Save failed"
+			},
+			"visible_if": {
+				"address": "0x0100",
+				"mask": "0x40"
+			}
+		},
+		{
+			"id": 2,
+			"label": "Load State",
+			"hotkey": "load_state",
+			"address": "0x14",
+			"type": "action",
+			"value": "0x12",
+			"status": {
+				"address": "0x0100",
+				"busy_mask": "0x680",
+				"start_mask": "0x80",
+				"fail_mask": "0x100",
+				"timeout_ms": 6000,
+				"done_text": "State loaded",
+				"fail_text": "Load failed",
+				"refused_text": "No state in slot"
+			},
+			"visible_if": {
+				"address": "0x0100",
+				"mask": "0x40"
+			}
+		},
+		{
+			"id": 3,
+			"label": "State Slot",
+			"address": "0x18",
+			"mask": "0xFFFFFFFC",
+			"default": 0,
+			"type": "list",
+			"items": [
+				{ "label": "1", "value": 0 },
+				{ "label": "2", "value": 1 },
+				{ "label": "3", "value": 2 },
+				{ "label": "4", "value": 3 }
+			],
+			"visible_if": {
+				"address": "0x0100",
+				"mask": "0x40"
+			}
+		},
+		{
+			"id": 4,
+			"label": "Scaling",
+			"address": "0xF1001018",
+			"mask": "0x0",
+			"type": "list",
+			"items": [
+				{ "label": "4:3 (TV)", "value": "0x2" },
+				{ "label": "Fit (1:1 px)", "value": "0x1" },
+				{ "label": "1x", "value": "0x0" },
+				{ "label": "Stretch", "value": "0x3" }
+			],
+			"default": "0x2"
+		},
+		{
+			"id": 12,
+			"label": "Screen Filter",
+			"address": "0xF100101C",
+			"mask": "0x0",
+			"type": "list",
+			"items": [
+				{ "label": "Off", "value": "0x0" },
+				{ "label": "Smooth", "value": "0x3" }
+			],
+			"default": "0x0"
+		},
+		{
+			"id": 13,
+			"label": "Sound Filter",
+			"address": "0x0",
+			"mask": "0xFFFF9FFF",
+			"type": "list",
+			"items": [
+				{ "label": "Off", "value": "0x0" },
+				{ "label": "Soft", "value": "0x2000" },
+				{ "label": "Softer", "value": "0x4000" },
+				{ "label": "Speaker", "value": "0x6000" }
+			],
+			"default": "0x2000"
+		},
+		{
+			"id": 5,
+			"label": "System",
+			"address": "0x0",
+			"mask": "0xFFFFFFFC",
+			"default": 0,
+			"type": "list",
+			"items": [
+				{ "label": "Auto", "value": 0 },
+				{ "label": "NTSC", "value": 1 },
+				{ "label": "PAL", "value": 2 },
+				{ "label": "Dendy", "value": 3 }
+			]
+		},
+		{
+			"id": 6,
+			"label": "Palette",
+			"address": "0x0",
+			"mask": "0xFFFFFFC3",
+			"default": 0,
+			"type": "list",
+			"items": [
+				{ "label": "Kitrinx", "value": 0 },
+				{ "label": "Smooth", "value": "0x4" },
+				{ "label": "Wavebeam", "value": "0x8" },
+				{ "label": "Sony CXA", "value": "0xC" },
+				{ "label": "PC-10 Better", "value": "0x10" }
+			]
+		},
+		{
+			"id": 7,
+			"label": "Overscan",
+			"address": "0x0",
+			"mask": "0xFFFFFFBF",
+			"default": 0,
+			"type": "list",
+			"items": [
+				{ "label": "Show all", "value": 0 },
+				{ "label": "Hide 8 lines", "value": "0x40" }
+			]
+		},
+		{
+			"id": 8,
+			"label": "Mask Left Edge",
+			"address": "0x0",
+			"mask": "0xFFFFFF7F",
+			"default": 0,
+			"type": "checkbox",
+			"value": "0x80"
+		},
+		{
+			"id": 9,
+			"label": "Extra Sprites",
+			"address": "0x0",
+			"mask": "0xFFFFFEFF",
+			"default": 0,
+			"type": "checkbox",
+			"value": "0x100"
+		},
+		{
+			"id": 10,
+			"label": "Buttons",
+			"address": "0x0",
+			"mask": "0xFFFFFDFF",
+			"default": 0,
+			"type": "list",
+			"items": [
+				{ "label": "A / B", "value": 0 },
+				{ "label": "B / Y", "value": "0x200" }
+			]
+		},
+		{
+			"id": 11,
+			"label": "PPU Reset",
+			"address": "0x0",
+			"mask": "0xFFFFEFFF",
+			"default": 0,
+			"type": "list",
+			"items": [
+				{ "label": "Famicom", "value": 0 },
+				{ "label": "NES", "value": "0x1000" }
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "id": "minuitfranck.NES",
+    "name": "NES / Famicom",
+    "author": "minuitfranck",
+    "version": "r2.4",
+    "license": "GPL-3.0-only"
+  },
+  "bitstreams": [
+    { "target": "gamebub_rev2", "filename": "nes_rev2.bit" }
+  ],
+  "hardware": {
+    "cartridge_enable": "no"
+  }
+}

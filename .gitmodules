@@ -1,0 +1,3 @@
+[submodule "fpga/verilog/hdmi"]
+	path = fpga/verilog/hdmi
+	url = https://github.com/elipsitz/systemverilog-hdmi
