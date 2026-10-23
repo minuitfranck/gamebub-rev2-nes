@@ -4,6 +4,8 @@ An FPGA core for the rev2 (vertical) [Game Bub](https://github.com/elipsitz/game
 (Ludvig Strigeus's FPGANES, extended by the MiSTer contributors) on the Game Bub's FPGA framework, with battery saves
 and save states. Current build: **r2.13**.
 
+**Archived 23 October 2026.** This repository stays as the home of release r2.13 and its sources. Development continues in a private repository that holds the firmware and every core in one tree; no further releases are planned here.
+
 Not affiliated with, endorsed by or supported by Eli Lipsitz or the Game Bub project. The rev4 has its own
 official releases; this core runs on a rev2 with the rev2 custom firmware.
 
